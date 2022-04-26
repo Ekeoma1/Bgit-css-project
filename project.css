@@ -2,6 +2,13 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    background-color: var(--body-bg);
+    color: #fff;
+}
+
+:root{
+    --pri-color: #68e0cf;
+    --body-bg: #373b40;
 }
 
 a{
@@ -54,7 +61,7 @@ nav{
 }
 
 .menu-wrapper a:hover, .menu-wrapper a.active {
-    color: #68e0cf;
+    color: var(--pri-color);
 }
 
 .nav-btn{
@@ -64,7 +71,7 @@ nav{
 }
 
 .nav-btn:hover{
-    border: 1px solid #68e0cf;
+    border: 1px solid var(--pri-color);
 
 }
 
@@ -84,13 +91,6 @@ nav{
     background-color: rgba(104, 224, 207, 0.4);
 }
 
-.section-wrapper{
-    width: 50%;
-    height: 1500px;
-    background-color: #373b40;
-    position: absolute;
-    left: 45%;
-}
 
 .social-wrapper{
     width: 5%;
@@ -99,9 +99,70 @@ nav{
     position: fixed;
     right: 0;
     border-left: 1px solid #585d65 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px 0;
+}
+
+.social-icon-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #585d65;
+    /* margin: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-icon{
     color: #fff;
 }
 
+.social-icon:hover{
+    color: var(--pri-color);
+}
+
+
+/* section wrapper */
+
+.section-wrapper{
+    width: 50%;
+    position: absolute;
+    left: 45%;
+    margin-top: 120px;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+/* intro section */
+
+.intro-section h1{
+    font-weight: 800;
+    color: #fff;
+    font-size: 48px;
+    line-height: 58px;
+    margin: 50px 0 0 -200px;
+    padding: 70px;
+    border-radius: 140px;
+    background-color: var(--body-bg);
+}
+
+.job-title{
+    text-transform: uppercase;
+    color: var(--pri-color);
+    font-size: 16px;
+}
+
+.summary-desc{
+    width: 450px;
+}
+
+.summary-desc > p{
+    line-height: 24px;
+}
